@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    .login-form
+      form(action='/users/login', method='POST')
+        h1 Login
+        .content
+        .input-field
+        input(type='text' name='username' placeholder='username')
+        .input-field
+        input(type='password' name='password' placeholder='Password')
+        .action
+        button(type='submit') Sign in
